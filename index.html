@@ -4,11 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <title>Crossing Knowledge</title>
 </head>
 
 <body>
+    <div style="width: 69.5%;">
+        <header class="header">
+            <button class="header__reg-btn--teacher">Register as a teacher</button>
+        </header>
 
+        <section class="auth">
+            <img class="auth__logo" src="./imgs/Crossing Knowledge.svg" alt="Crossing Knowledge Logo"
+                style="margin-bottom: 48px;">
+
+            <button class="auth__google-btn">
+                <img class="auth__google-icon" src="./imgs/image 19.svg" alt="google logo">
+                Sign up with Google
+            </button>
+
+            <div class="auth__separator">
+                <img class="auth__separator-line" src="./imgs/Line 2 (1).svg" alt="">
+                <p class="auth__separator-text">or sign up with email</p>
+                <img class="auth__separator-line" src="./imgs/Line 2 (1).svg" alt="">
+            </div>
+
+            <form onsubmit="saveData(event)" class="auth-form" id="form">
+
+                <div class="auth-form__field">
+                    <label class="auth-form__label">Parent’s Name</label>
+                    <input id="parentName" class="auth-form__input" type="text" placeholder="" required>
+                </div>
+
+                <div class="auth-form__field">
+                    <label class="auth-form__label">Email</label>
+                    <input id="email" class="auth-form__input" type="email" placeholder="" required>
+                </div>
+
+                <div class="auth-form__field auth-form__field--password">
+                    <label class="auth-form__label">Password</label>
+                    <input id="password" class="auth-form__input" type="password" autocomplete="current-password"
+                        placeholder="6+ characters" required>
+
+                    <button class="auth-form__eye-btn" type="button">
+                        <img class="auth-form__eye-icon" src="./imgs/eye-crossed 1.svg" alt="">
+                    </button>
+                </div>
+
+                <div class="auth-form__terms">
+                    By continuing, you agree with Crossing Knowledge’s
+                    <a class="auth-form__link" href="#">Terms of Service</a> and
+                    <a class="auth-form__link" href="#">Privacy Policy</a>.
+                </div>
+
+                <button type="submit" class="auth-form__cta" type="button">Create Account</button>
+
+                <div class="auth-form__login">
+                    Already have an account? <a class="auth-form__login-link" href="#">Sign In</a>
+                </div>
+
+            </form>
+        </section>
+    </div>
+    <img src="./imgs/Frame 3017.svg" alt="">
+
+    <script src="./app.js"></script>
 </body>
 
 </html>
