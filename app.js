@@ -11,6 +11,6 @@ function saveData(e) {
 
     console.log('reg info added to localstorage');
 
-    window.location.href = 'main.html';
+    window.location.href = 'home.html';
 }
 

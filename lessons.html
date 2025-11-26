@@ -8,6 +8,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
@@ -18,8 +19,9 @@
         <aside>
             <img src="./imgs/Crossing Knowledge.svg" alt="" style="margin: 24px 0;">
             <div class="aside__btns">
-                <a href="#" class="aside__link aside__link-active"><i class="fa-solid fa-house"></i>Home</a>
-                <a href="#" class="aside__link"><i class="fa-solid fa-book-open"></i>Lessons</a>
+                <a href="home.html" class="aside__link"><i class="fa-solid fa-house"></i>Home</a>
+                <a href="lessons.html" class="aside__link aside__link-active"><i
+                        class="fa-solid fa-book-open"></i>Lessons</a>
                 <a href="#" class="aside__link"><i class="fa-solid fa-calendar"></i>Schedule</a>
                 <a href="#" class="aside__link"><i class="fa-solid fa-paper-plane"></i>Inbox</a>
                 <a href="#" class="aside__link"><i class="fa-solid fa-shop"></i>Shop</a>
@@ -34,7 +36,139 @@
         </aside>
         <main>
             <div class="lessons">
-                <h1 class="lessons__title">Lessons</h1>
+                <div class="lessons__header">
+                    <div>
+                        <h1 class="lessons__title">Lessons</h1>
+                        <p class="lessons__subtitle">Keep track of your current and completed lessons.</p>
+                    </div>
+                    <div class="lessons__header-right">
+                        <div class="lessons__header-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search">
+                        </div>
+                        <div class="lessons__header-layout-switch">
+                            <button class=" lessons__header-list-view"><i class="fa-solid fa-list-ul"></i></button>
+                            <button class="lessons__header-grid-view"><i class="ri-layout-grid-fill "></i></button>
+                        </div>
+                        <button class="lessons__btn-filter"><i class="ri-filter-3-line"></i>Filters</button>
+                    </div>
+                </div>
+                <table class="lessons-table">
+                    <thead>
+                        <tr>
+                            <th>Lesson name</th>
+                            <th>Date</th>
+                            <th>Duration</th>
+                            <th>Category</th>
+                            <th>Instructor</th>
+                            <th>Child</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><span class="play-icon">▶</span> Lesson 10</td>
+                            <td>20/10/24</td>
+                            <td>20 minutes</td>
+                            <td>Mixed</td>
+                            <td>Parent</td>
+                            <td>Jacob</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Lesson 9</td>
+                            <td>15/10/24</td>
+                            <td>15 minutes</td>
+                            <td>Mixing Colours</td>
+                            <td>Parent</td>
+                            <td>Jacob</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Lesson 8</td>
+                            <td>12/10/24</td>
+                            <td>10:30AM - 30 minutes</td>
+                            <td>Matching Numbers</td>
+                            <td>Teacher</td>
+                            <td>Jacob</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Lesson 7</td>
+                            <td>10/10/24</td>
+                            <td>15 minutes</td>
+                            <td>Super Shapes</td>
+                            <td>Parent</td>
+                            <td>Jacob</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Lesson 6</td>
+                            <td>06/10/24</td>
+                            <td>20 minutes</td>
+                            <td>Animals</td>
+                            <td>Parent</td>
+                            <td>Jacob</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Lesson 5</td>
+                            <td>02/10/24</td>
+                            <td>30 minutes</td>
+                            <td>Feelings</td>
+                            <td>Parent</td>
+                            <td>Jacob</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Lesson 4</td>
+                            <td>25/09/24</td>
+                            <td>15 minutes</td>
+                            <td>Transport</td>
+                            <td>Parent</td>
+                            <td>Jacob</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Lesson 3</td>
+                            <td>22/09/24</td>
+                            <td>30 minutes</td>
+                            <td>Home</td>
+                            <td>Parent</td>
+                            <td>Jacob</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Lesson 2</td>
+                            <td>18/09/24</td>
+                            <td>15 minutes</td>
+                            <td>Body</td>
+                            <td>Parent</td>
+                            <td>Jacob</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Lesson 1</td>
+                            <td>14/09/24</td>
+                            <td>1PM – 15 minutes</td>
+                            <td>Back To School</td>
+                            <td>Teacher</td>
+                            <td>Jacob</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
             </div>
         </main>
     </div>
