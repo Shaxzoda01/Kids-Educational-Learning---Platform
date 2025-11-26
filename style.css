@@ -170,6 +170,7 @@ aside {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    border-right: 1px solid #DFDFDF;
 }
 
 .aside__btns {
@@ -241,7 +242,7 @@ main {
 
 }
 
-.aside__btn {
+.aside__link {
     display: inline-flex;
     align-items: center;
     gap: 16px;
@@ -256,14 +257,15 @@ main {
     color: #707070;
     background: transparent;
     border: 2px solid transparent;
+    text-decoration: none;
 }
 
-.aside__btn i {
+.aside__link i {
     font-size: 25px;
 }
 
-.aside__btn:hover,
-.aside__btn-active {
+.aside__link:hover,
+.aside__link-active {
     border: 2px solid #FFD372;
     background-color: #FFFADD;
     color: #343B6E;
@@ -301,9 +303,12 @@ main {
 }
 
 .home__info {
+    display: flex;
+    justify-content: space-between;
     border: 1px solid #DFDFDF;
     border-radius: 10px;
     padding: 24px;
+    margin-bottom: 48px;
 }
 
 .home__info-card-num {
@@ -325,4 +330,50 @@ main {
     letter-spacing: 0%;
     color: #707070;
     margin-top: 10px;
+}
+
+.home__category {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+.home__category-card {
+    position: relative;
+    border: 4px solid #DFDFDF;
+    box-shadow: 0px 8px 0px 0px #DFDFDF;
+    border-radius: 10px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.home__category-card:hover {
+    border: 4px solid #FFD372;
+    ;
+    background-color: #FFFADD;
+}
+
+.img-cloud {
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+}
+
+.home__category-card-text {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #343B6E;
+    margin-left: 24px;
+    margin-top: 88px;
+}
+
+.home__category-card-img {
+    position: absolute;
+    right: 60px;
+    bottom: 20px;
 }
