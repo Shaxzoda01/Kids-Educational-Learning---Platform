@@ -569,7 +569,8 @@ tbody td:first-child {
     border-bottom: 1px solid #DFDFDF;
 }
 
-.game__title {
+.game__title,
+.inbox__title {
     font-weight: 700;
     font-style: Bold;
     font-size: 32px;
@@ -578,7 +579,8 @@ tbody td:first-child {
     margin-bottom: 8px;
 }
 
-.game__subtitle {
+.game__subtitle,
+.inbox__subtitle {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
@@ -670,12 +672,20 @@ tbody td:first-child {
 .schedule__card-link {
     display: inline-block;
     text-align: center;
-    font-family: Inter;
     font-weight: 600;
-    font-style: Semi Bold;
     font-size: 16px;
-    leading-trim: NONE;
     line-height: 20px;
     letter-spacing: -2%;
     color: #343B6E;
+}
+
+.inbox__header {
+    border-bottom: 1px solid #DFDFDF;
+    padding: 40px 40px 24px 40px;
+}
+
+.inbox__sidebar {
+    width: 400px;
+    border-right: 1px solid #DFDFDF;
+    height: 100vh;
 }
