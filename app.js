@@ -14,3 +14,13 @@ function saveData(e) {
     window.location.href = 'home.html';
 }
 
+function selectBtn(btn) {
+    const current = btn.style.border;
+
+    if (current === "2px solid #FFD372" || current === "2px solid rgb(255, 211, 114)") {
+        btn.style.border = "1px solid #DFDFDF";
+    }
+    else {
+        btn.style.border = "2px solid #FFD372";
+    }
+}
