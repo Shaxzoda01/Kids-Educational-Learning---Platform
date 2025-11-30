@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <aside>
+            <img src="../imgs/Crossing Knowledge.svg" alt="" style="margin: 24px 0;">
+            <div class="aside__btns">
+                <a href="home.html" class="aside__link"><i class="fa-solid fa-house"></i>Home</a>
+                <a href="lessons.html" class="aside__link "><i class="fa-solid fa-book-open"></i>Lessons</a>
+                <a href="schedule.html" class="aside__link"><i class="fa-solid fa-calendar"></i>Schedule</a>
+                <a href="inbox.html" class="aside__link"><i class="fa-solid fa-paper-plane"></i>Inbox</a>
+                <a href="shop.html" class="aside__link"><i class="fa-solid fa-shop"></i>Shop</a>
+                <a href="profile.html aside__link-active" class="aside__link"><i
+                        class="fa-solid fa-user"></i>Profile</a>
+                <a href="index.html" class="aside__link"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+            </div>
+            <div class="add-wrapper">
+                <h1 class="add__title">Try Pro Edition for free</h1>
+                <p class="add__text">No ads, personalized practice, and access to many teachers</p>
+                <a class="add__link" href="#">Try 2 weeks free</a>
+            </div>
+        </aside>
+        <main>
+            <h1 style="margin-bottom: 24px;">Profile</h1>
+            <div class="profile__tabs">
+                <a class="profile__tabs-link profile__tabs-link-active" href="#profile">Profile</a>
+                <a class="profile__tabs-link" href="#billing">Billing</a>
+                <a class="profile__tabs-link" href="#settings">Settings</a>
+            </div>
+            <div id="profile" class="tab-content">
+                <div class="user-profile">
+                    <img src="./imgs/Frame 3034.svg" alt="user pfp" style="margin-bottom: 16px;">
+                    <h3 id="user-name"></h3>
+                    <p id="user-email"></p>
+                    <div class="profile__plan">
+                        <span class="profile__plan-name">FREE</span>
+                        <span>You’re on the free plan. Visit the <a href="shop.html" class="profile__plan-link">
+                                shop</a> to upgrade.</span>
+                    </div>
+                    <div class="profile__achives">
+                        <div style="display: flex;">
+                            <img style="margin-right: 10px;" src="./imgs/trophy 2.svg" alt="">
+                            <p class="profile__achives-text">Achievements (5 / 100)</p>
+                        </div>
+                        <img src="./imgs/Frame (35).svg" alt="">
+                    </div>
+                    <div class="profile-user-info">
+                        <h2>Personal details</h2>
+
+                        <div class="profile-name-wrapper">
+                            <div>
+                                <label for="name">Name</label>
+
+                                <h3 style="margin-top: 8px;" id="user-name2"></h3>
+
+                            </div>
+                            <button class="profile__btn-edit" onclick="editName()">Edit</button>
+                        </div>
+                        <div class="profile-email-wrapper">
+                            <div>
+                                <label for="name">Email address</label>
+                                <h3 style="margin-top: 8px;" id="user-email2"></h3>
+                            </div>
+                            <button class="profile__btn-edit" onclick="editEmail()">Edit</button>
+                            <!-- <input type="text" id="name" name="name"> -->
+                        </div>
+                        <div class="profile-pswrd-wrapper">
+                            <div>
+                                <label for="name">Password</label>
+                                <h3 style="margin-top: 8px;" id="user-password"></h3>
+                            </div>
+                            <button class="profile__btn-edit" onclick="editPassword()">Edit</button>
+                            <!-- <input type="text" id="name" name="name"> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="billing" class="tab-content">Биллинг</div>
+            <div id="settings" class="tab-content">Настройки</div>
+        </main>
+    </div>
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
