@@ -13,38 +13,6 @@ function saveData(e) {
 
     window.location.href = 'home.html'
 }
-window.addEventListener("DOMContentLoaded", function () {
-    var usernameField = document.getElementById('user-name')
-    var username2Field = document.getElementById('user-name2')
-
-    var emailField = document.getElementById('user-email')
-    var email2Field = document.getElementById('user-email2')
-
-    var userPassword = document.getElementById('user-password')
-
-    var name = localStorage.getItem('parentName')
-    var email = localStorage.getItem('email')
-    var password = localStorage.getItem('password')
-    var masked = "•".repeat(password.length)
-
-    usernameField.textContent = name
-    username2Field.textContent = name
-    emailField.textContent = email
-    email2Field.textContent = email
-    userPassword.textContent = masked
-})
-
-function selectBtn(btn) {
-    var current = btn.style.border
-
-    if (current === "2px solid #FFD372" || current === "2px solid rgb(255, 211, 114)") {
-        btn.style.border = "1px solid #DFDFDF"
-    }
-    else {
-        btn.style.border = "2px solid #FFD372"
-    }
-}
-
 
 function editName() {
     var username = document.getElementById('user-name2')
@@ -90,6 +58,7 @@ function editPassword() {
 
     const input = document.getElementById('editPasswordInput')
 
+
     input.addEventListener("keydown", function (e) {
         if (e.key === "Enter") {
             const newValue = input.value
@@ -99,3 +68,101 @@ function editPassword() {
         }
     })
 }
+
+
+var first = null;
+var completedGames = 0;
+var totalGames = 4;
+
+var currentGame = 1;
+var totalGameStages = 5;
+
+function updateProgress() {
+    var bar = document.getElementById("progressBar");
+
+    var progress = (completedGames / totalGames) * 100;
+    bar.style.width = progress + "%";
+
+    if (completedGames === totalGames) {
+        document.getElementById("nextBtn").style.display = "block";
+    }
+}
+
+function selectBtn(btn) {
+    if (first === null) {
+        first = btn;
+        first.style.border = "2px solid #FFD372";
+        return
+    }
+
+    var second = btn;
+    second.style.border = "2px solid #FFD372";
+
+
+    var f = first;
+    var s = second;
+
+    const fText = f.textContent;
+    const sText = s.textContent;
+
+    if (f.textContent.length === Number(second.textContent) * 2 ||
+        s.textContent.length === Number(first.textContent) * 2) {
+
+        f.style.backgroundImage = "url('../imgs/green.svg')";
+        s.style.backgroundImage = "url('../imgs/green.svg')";
+
+        f.textContent = "";
+        s.textContent = "";
+
+        f.disabled = true;
+        s.disabled = true;
+
+        completedGames++;
+        updateProgress();
+
+        f.style.border = "";
+        s.style.border = "";
+
+        first = null;
+    } else {
+        f.style.backgroundImage = "url('../imgs/red.svg')";
+        s.style.backgroundImage = "url('../imgs/red.svg')";
+
+        f.textContent = "";
+        s.textContent = "";
+
+        setTimeout(function () {
+            f.style.backgroundImage = "";
+            s.style.backgroundImage = "";
+            f.style.border = "";
+            s.style.border = "";
+
+            f.textContent = fText;
+            s.textContent = sText;
+        }, 500);
+
+        first = null;
+    }
+}
+
+function nextGame() {
+    document.getElementById("game" + currentGame).style.display = "none";
+
+    currentGame++;
+    if (currentGame > totalGameStages) {
+        document.getElementById("game" + currentGame).textContent = `
+            <img src="../imgs/Group 66.svg" alt="">
+        `
+        document.getElementById("nextBtn").style.display = "none";
+        return
+    }
+
+    document.getElementById("game" + currentGame).style.display = "grid";
+
+    completedGames = 0;
+    totalGames = 4;
+    document.getElementById("progressBar").style.width = "0%";
+
+    document.getElementById("nextBtn").style.display = "none";
+}
+

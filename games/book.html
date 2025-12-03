@@ -22,7 +22,7 @@
                 <a href="../home.html" class="aside__link aside__link-active"><i class="fa-solid fa-house"></i>Home</a>
                 <a href="../lessons.html" class="aside__link "><i class="fa-solid fa-book-open"></i>Lessons</a>
                 <a href="../schedule.html" class="aside__link"><i class="fa-solid fa-calendar"></i>Schedule</a>
-                <a href="#" class="aside__link"><i class="fa-solid fa-paper-plane"></i>Inbox</a>
+                <a href="#" class="aside__link "><i class="fa-solid fa-paper-plane"></i>Inbox</a>
                 <a href="../shop.html" class="aside__link"><i class="fa-solid fa-shop"></i>Shop</a>
                 <a href="../profile.html" class="aside__link"><i class="fa-solid fa-user"></i>Profile</a>
                 <a href="../index.html" class="aside__link"><i
@@ -34,60 +34,28 @@
                 <a class="add__link" href="#">Try 2 weeks free</a>
             </div>
         </aside>
-        <div class="game">
-            <div class="game__header">
-                <div>
-                    <h1 class="game__title">Match the numbers with the pictures</h1>
-                    <p class="game__subtitle">Select the numbers that match in the pictures.</p>
+        <main>
+            <h1 class="game__title">
+                Reading Exercise
+            </h1>
+            <p style="margin-bottom: 40px;" class="game__subtitle">Read the book to learn the story.</p>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div>
+                <div class="book">
+                    <button onclick="prevPage()" class="game__arrow-btn game__arrow-btn-left"
+                        style="padding: 2px 8px 3px 3px;"><i class="ri-arrow-left-s-line"></i></button>
+                    <img src="../imgs/book_page3.jpg" alt="">
+                    <button onclick="nextPage()" class="game__arrow-btn game__arrow-btn-right"
+                        style="    padding: 2px 4px 3px 7px;"><i class="ri-arrow-right-s-line"></i></button>
                 </div>
-                <button class="game__header-btn">
-                    Skip
-                </button>
             </div>
-            <div class="game__wrapper">
-
-                <button class="game__btn">
-                    <img src="../imgs/image 35.svg" alt="">
-                </button>
-
-
-                <button class="game__btn">
-                    <img src="../imgs/image 36.svg" alt="">
-                </button>
-
-
-                <button class="game__btn">
-                    <img src="../imgs/image 37.svg" alt="" height="250px">
-                </button>
-
-
-                <button class="game__btn">
-                    <img src="../imgs/image 38.svg" alt="">
-                </button>
-
-
-                <button class="game__btn">
-                    <img src="../imgs/Dog.svg" alt="">
-                </button>
-
-
-                <button class="game__btn">
-                    <img src="../imgs/Cat.svg" alt="">
-                </button>
-
-
-                <button class="game__btn">
-                    <img src="../imgs/Bird.svg" alt="">
-                </button>
-
-                <button class="game__btn">
-                    <img src="../imgs/Rabbit.svg" alt="">
-                </button>
-            </div>
-        </div>
+        </main>
+    </div>
     </div>
 
-    <script src="../app.js"></script>
+    <script src="./book.js"></script>
 
 </body>
 

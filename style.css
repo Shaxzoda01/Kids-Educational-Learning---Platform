@@ -561,6 +561,7 @@ tbody td:first-child {
 
 .game {
     width: 100%;
+    text-align: center;
 }
 
 .game__header {
@@ -609,7 +610,9 @@ tbody td:first-child {
     margin-top: 80px;
     width: 100%;
     max-width: 1045px;
-    margin: 80px auto;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 35px;
 }
 
 .game__btn {
@@ -618,6 +621,16 @@ tbody td:first-child {
     box-shadow: 0px 4px 4px 0px #00000026;
     border-radius: 10px;
     height: 300px;
+    font-size: 44px;
+}
+
+.bottom-btn {
+    font-family: "Cherry Bomb One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 72px;
+    line-height: 100%;
+    letter-spacing: 0%;
 }
 
 .game__btn:hover {
@@ -787,18 +800,6 @@ tbody td:first-child {
     border-bottom: 4px solid #343B6E;
 
 }
-
-
-/* #profile:target~.profile__tabs a[href="#profile"],
-#billing:target~.profile__tabs a[href="#billing"],
-#settings:target~.profile__tabs a[href="#settings"] {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0%;
-    color: #343B6E;
-    border-bottom: 4px solid #343B6E;
-} */
 
 .tab-content {
     display: none;
@@ -1130,4 +1131,154 @@ tbody td:first-child {
     border: 4px solid #DFDFDF;
     box-shadow: 0px 4px 0px 0px #DFDFDF;
     outline: none;
+}
+
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background-color: transparent;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(236.03deg, #E35CFF 8.94%, #3387FF 51.01%, #25EC77 97.51%);
+}
+
+.game__arrow-btn {
+    position: absolute;
+    background-color: rgb(140, 181, 140);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.game__arrow-btn-left {
+    bottom: 15px;
+    left: 20px;
+}
+
+.game__arrow-btn-right {
+    bottom: 15px;
+    right: 20px;
+}
+
+.game__arrow-btn:hover {
+    background-color: rgb(108, 140, 108);
+}
+
+.book {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.book img {
+    height: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#nextBtn {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -2%;
+    text-align: center;
+    color: #fff;
+    background: #F15D41;
+    border-width: 1px, 1px, 0px, 1px;
+    border-style: solid;
+    border-color: #000000;
+    box-shadow: 0px 4px 1px 0px #343B6E;
+    padding: 12px 88px;
+    border-radius: 10px;
+    width: 212px;
+    margin: auto;
+}
+
+#game1 button:nth-child(5) {
+    color: #FD5D78;
+}
+
+#game1 button:nth-child(7) {
+    color: #4EA2FF;
+}
+
+#game1 button:nth-child(6) {
+    color: #FAB53A;
+}
+
+#game1 button:nth-child(8) {
+    color: #F92972;
+}
+
+#game2 button:nth-child(5) {
+    color: #DE5D31;
+}
+
+#game2 button:nth-child(7) {
+    color: #EF4028;
+}
+
+#game2 button:nth-child(6) {
+    color: #FAB53A;
+}
+
+#game2 button:nth-child(8) {
+    color: #F67C2C;
+}
+
+#game3 button:nth-child(5) {
+    color: #C7224B;
+}
+
+#game3 button:nth-child(7) {
+    color: #C72B54;
+}
+
+#game3 button:nth-child(6) {
+    color: #FE3E77;
+}
+
+#game3 button:nth-child(8) {
+    color: #E67ECE;
+}
+
+#game4 button:nth-child(5) {
+    color: #66ACFF;
+}
+
+#game4 button:nth-child(7) {
+    color: #EEA758;
+}
+
+#game4 button:nth-child(6) {
+    color: #FE3E77;
+}
+
+#game4 button:nth-child(8) {
+    color: #DF54B8;
+}
+
+#game5 button:nth-child(5) {
+    color: #66ACFF;
+}
+
+#game5 button:nth-child(7) {
+    color: #EEA758;
+}
+
+#game5 button:nth-child(6) {
+    color: #FE3E77;
+}
+
+#game5 button:nth-child(8) {
+    color: #DF54B8;
 }

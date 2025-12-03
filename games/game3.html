@@ -9,6 +9,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <title>Document</title>
 </head>
@@ -22,7 +23,7 @@
                 <a href="../home.html" class="aside__link aside__link-active"><i class="fa-solid fa-house"></i>Home</a>
                 <a href="../lessons.html" class="aside__link "><i class="fa-solid fa-book-open"></i>Lessons</a>
                 <a href="../schedule.html" class="aside__link"><i class="fa-solid fa-calendar"></i>Schedule</a>
-                <a href="../inbox.html" class="aside__link"><i class="fa-solid fa-paper-plane"></i>Inbox</a>
+                <a href="#" class="aside__link"><i class="fa-solid fa-paper-plane"></i>Inbox</a>
                 <a href="../shop.html" class="aside__link"><i class="fa-solid fa-shop"></i>Shop</a>
                 <a href="../profile.html" class="aside__link"><i class="fa-solid fa-user"></i>Profile</a>
                 <a href="../index.html" class="aside__link"><i
@@ -44,49 +45,73 @@
                     Skip
                 </button>
             </div>
-            <div class="game__wrapper">
+            <div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <div class="game__wrapper" id="game1">
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">🌸🌸🌸</button>
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">🐟🐟</button>
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">🦀</button>
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">🍊🍊🍊🍊🍊</button>
 
-                <button class="game__btn" onclick="selectBtn(this)">
-                    <img src="../imgs/jjjjjj.png" alt="" height="200px">
-                </button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">3</button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">5</button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">2</button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">1</button>
+                </div>
 
+                <div class="game__wrapper" id="game2" style="display:none">
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">🍊</button>
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">🦊🦊🦊🦊</button>
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">🐯🐯🐯🐯🐯</button>
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">🎃🎃🎃</button>
 
-                <button class="game__btn" onclick="selectBtn(this)">
-                    <img src="../imgs/image 21.svg" alt="">
-                    <img src="../imgs/image 21.svg" alt="">
-                </button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">5</button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">1</button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">3</button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">4</button>
+                </div>
 
+                <div class="game__wrapper" id="game3" style="display:none">
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">💖💖💖</button>
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">💗💗💗💗</button>
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">💓</button>
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">💕💕</button>
 
-                <button class="game__btn" onclick="selectBtn(this)">
-                    <img src="../imgs/image 23.svg" alt="">
-                </button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">1</button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">2</button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">3</button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">4</button>
+                </div>
 
+                <div class="game__wrapper" id="game4" style="display:none">
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">🐙</button>
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">🦑🦑</button>
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">🦀🦀🦀</button>
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">🐠🐠🐠🐠</button>
 
-                <button class="game__btn" onclick="selectBtn(this)">
-                    <img src="../imgs/nemo.png" alt="" height="250px">
-                </button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">4</button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">3</button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">1</button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">2</button>
+                </div>
 
+                <div class="game__wrapper" id="game5" style="display:none">
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">🍩</button>
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">🍪🍪</button>
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">🍫🍫🍫</button>
+                    <button class="game__btn top-btn" onclick="selectBtn(this)">🧁🧁🧁🧁</button>
 
-                <button class="game__btn" onclick="selectBtn(this)">
-                    <img src="../imgs/3.svg" alt="">
-                </button>
-
-
-                <button class="game__btn" onclick="selectBtn(this)">
-                    <img src="../imgs/5.svg" alt="">
-                </button>
-
-
-                <button class="game__btn" onclick="selectBtn(this)">
-                    <img src="../imgs/2.svg" alt="">
-                </button>
-
-
-                <button class="game__btn" onclick="selectBtn(this)">
-                    <img src="../imgs/1.svg" alt="">
-                </button>
-
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">4</button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">3</button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">2</button>
+                    <button class="game__btn bottom-btn" onclick="selectBtn(this)">1</button>
+                </div>
             </div>
+            <button style="display:none;" id="nextBtn" onclick="nextGame()">Next</button>
+
+            <!-- " -->
         </div>
     </div>
 
