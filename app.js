@@ -70,99 +70,99 @@ function editPassword() {
 }
 
 
-var first = null;
-var completedGames = 0;
-var totalGames = 4;
+var first = null
+var completedGames = 0
+var totalGames = 4
 
-var currentGame = 1;
-var totalGameStages = 5;
+var currentGame = 1
+var totalGameStages = 5
 
 function updateProgress() {
-    var bar = document.getElementById("progressBar");
+    var bar = document.getElementById("progressBar")
 
-    var progress = (completedGames / totalGames) * 100;
-    bar.style.width = progress + "%";
+    var progress = (completedGames / totalGames) * 100
+    bar.style.width = progress + "%"
 
     if (completedGames === totalGames) {
-        document.getElementById("nextBtn").style.display = "block";
+        document.getElementById("nextBtn").style.display = "block"
     }
 }
 
 function selectBtn(btn) {
     if (first === null) {
-        first = btn;
-        first.style.border = "2px solid #FFD372";
+        first = btn
+        first.style.border = "2px solid #FFD372"
         return
     }
 
-    var second = btn;
-    second.style.border = "2px solid #FFD372";
+    var second = btn
+    second.style.border = "2px solid #FFD372"
 
 
-    var f = first;
-    var s = second;
+    var f = first
+    var s = second
 
-    const fText = f.textContent;
-    const sText = s.textContent;
+    const fText = f.textContent
+    const sText = s.textContent
 
     if (f.textContent.length === Number(second.textContent) * 2 ||
         s.textContent.length === Number(first.textContent) * 2) {
 
-        f.style.backgroundImage = "url('../imgs/green.svg')";
-        s.style.backgroundImage = "url('../imgs/green.svg')";
+        f.style.backgroundImage = "url('../imgs/green.svg')"
+        s.style.backgroundImage = "url('../imgs/green.svg')"
 
-        f.textContent = "";
-        s.textContent = "";
+        f.textContent = ""
+        s.textContent = ""
 
-        f.disabled = true;
-        s.disabled = true;
+        f.disabled = true
+        s.disabled = true
 
-        completedGames++;
-        updateProgress();
+        completedGames++
+        updateProgress()
 
-        f.style.border = "";
-        s.style.border = "";
+        f.style.border = ""
+        s.style.border = ""
 
-        first = null;
+        first = null
     } else {
-        f.style.backgroundImage = "url('../imgs/red.svg')";
-        s.style.backgroundImage = "url('../imgs/red.svg')";
+        f.style.backgroundImage = "url('../imgs/red.svg')"
+        s.style.backgroundImage = "url('../imgs/red.svg')"
 
-        f.textContent = "";
-        s.textContent = "";
+        f.textContent = ""
+        s.textContent = ""
 
         setTimeout(function () {
-            f.style.backgroundImage = "";
-            s.style.backgroundImage = "";
-            f.style.border = "";
-            s.style.border = "";
+            f.style.backgroundImage = ""
+            s.style.backgroundImage = ""
+            f.style.border = ""
+            s.style.border = ""
 
-            f.textContent = fText;
-            s.textContent = sText;
-        }, 500);
+            f.textContent = fText
+            s.textContent = sText
+        }, 500)
 
-        first = null;
+        first = null
     }
 }
 
 function nextGame() {
-    document.getElementById("game" + currentGame).style.display = "none";
+    document.getElementById("game" + currentGame).style.display = "none"
 
-    currentGame++;
+    currentGame++
     if (currentGame > totalGameStages) {
-        document.getElementById("game" + currentGame).textContent = `
-            <img src="../imgs/Group 66.svg" alt="">
-        `
-        document.getElementById("nextBtn").style.display = "none";
+        const container = document.querySelector(".games")
+        container.innerHTML = `<img src="../imgs/Group 66.svg" alt="" style="width:100% height:auto">`
+
+        document.getElementById("nextBtn").style.display = "none"
         return
     }
 
-    document.getElementById("game" + currentGame).style.display = "grid";
+    document.getElementById("game" + currentGame).style.display = "grid"
 
-    completedGames = 0;
-    totalGames = 4;
-    document.getElementById("progressBar").style.width = "0%";
+    completedGames = 0
+    totalGames = 4
+    document.getElementById("progressBar").style.width = "0%"
 
-    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("nextBtn").style.display = "none"
 }
 
